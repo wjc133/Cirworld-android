@@ -20,11 +20,10 @@ if [ ! -e ${INITIALIZATION_FILE} ]; then
   echo y | android update sdk --no-ui --filter android-23 > /dev/null
 
   # uncomment to install the Extra/Android Support Library
-  # echo y | android update sdk --no-ui --filter extra-android-support --all > /dev/null
-
+  echo y | android update sdk --no-ui --filter addon-google_apis-google-23 --all > /dev/null
   # uncomment these if you are using maven/gradle to build your android project
-  # echo y | android update sdk --no-ui --filter extra-google-m2repository --all > /dev/null
-  # echo y | android update sdk --no-ui --filter extra-android-m2repository --all > /dev/null
+  echo y | android update sdk --no-ui --filter extra-google-m2repository --all > /dev/null
+  echo y | android update sdk --no-ui --filter extra-android-m2repository --all > /dev/null
 
   # Specify at least one system image if you want to run emulator tests
   echo y | android update sdk --no-ui --filter sys-img-armeabi-v7a-android-23 --all > /dev/null
